@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.elextec.persist.dao.mybatis.PaymentMapperExt">
+
+    <select id="paymentList" resultMap="BaseResultMap">
+      SELECT id, name, icon, app_id, alipay_private_key, mch_id, wechat_private_key, create_time, update_time
+      FROM payment
+    </select>
+
+</mapper>
