@@ -18,4 +18,10 @@ public interface PaymentService {
      */
     public void insert(Payment record);
 
+    /**
+     * 修改支付对象
+     * @param record 支付对象
+     */
+    public void updatePayment(Payment record);
+
 }

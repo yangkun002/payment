@@ -4,7 +4,6 @@ import com.elextec.framework.common.constants.RunningResult;
 import com.elextec.framework.exceptions.BizException;
 import com.elextec.framework.utils.WzUniqueValUtil;
 import com.elextec.lease.manager.service.PaymentService;
-import com.elextec.persist.dao.mybatis.PaymentMapper;
 import com.elextec.persist.dao.mybatis.PaymentMapperExt;
 import com.elextec.persist.model.mybatis.Payment;
 import com.elextec.persist.model.mybatis.PaymentExample;
@@ -44,5 +43,17 @@ public class PaymentServiceImpl implements PaymentService {
         record.setId(WzUniqueValUtil.makeUUID());
         record.setCreateTime(new Date());
         paymentMapperExt.insert(record);
+    }
+
+    @Override
+    public void updatePayment(Payment record) {
+        PaymentExample paymentExample = new PaymentExample();
+        PaymentExample.Criteria criteria = paymentExample.createCriteria();
+        criteria.andIdEqualTo(record.getId());
+        if (paymentMapperExt.countByExample(paymentExample) == 0) {
+            throw new BizException(RunningResult.NO_USER.code(),"该支付方式不存在");
+        }
+        record.setUpdateTime(new Date());
+        paymentMapperExt.updateByPrimaryKey(record);
     }
 }
