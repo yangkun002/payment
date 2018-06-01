@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="899f6e28-2a09-4f6c-bcc7-604f24789d21" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/payment.iml" afterPath="$PROJECT_DIR$/payment.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/controller/PaymentController.java" afterPath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/controller/PaymentController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/PaymentService.java" afterPath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/PaymentService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/impl/PaymentServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/impl/PaymentServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,6 +30,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="application-dev.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="52" column="29" lean-forward="false" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+              <folding>
+                <element signature="e#55#1194#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="PaymentServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/impl/PaymentServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -44,11 +58,13 @@
       <file leaf-file-name="PaymentController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/controller/PaymentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-694">
-              <caret line="72" column="36" lean-forward="false" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
+            <state relative-caret-position="755">
+              <caret line="179" column="2" lean-forward="false" selection-start-line="179" selection-start-column="2" selection-end-line="179" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#list#0;class#PaymentController#0" expanded="false" />
+                <element signature="method#addone#0;class#PaymentController#0" expanded="false" />
+                <element signature="method#modify#0;class#PaymentController#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -79,15 +95,15 @@
         <option value="$PROJECT_DIR$/src/main/resources/logback.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/elextec/PaymentApplication.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/model/PaymentParts.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/elextec/persist/dao/mybatis/PaymentMapperExt.java" />
         <option value="$PROJECT_DIR$/src/main/resources/sqlmap/PaymentMapperExt.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/elextec/framework/BaseController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/elextec/framework/filter/VisitFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/PaymentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/impl/PaymentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/controller/PaymentController.java" />
       </list>
     </option>
@@ -384,12 +400,12 @@
       <updated>1527734800219</updated>
       <workItem from="1527734804111" duration="2246000" />
       <workItem from="1527748811635" duration="8054000" />
-      <workItem from="1527816311629" duration="6721000" />
+      <workItem from="1527816311629" duration="8442000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17021000" />
+    <option name="totallyTimeSpent" value="18742000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -588,14 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="34" column="38" lean-forward="false" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/model/PaymentParts.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -743,14 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1495">
-          <caret line="65" column="68" lean-forward="false" selection-start-line="65" selection-start-column="68" selection-end-line="65" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/elextec/persist/dao/mybatis/PaymentMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-96">
@@ -785,6 +785,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/elextec/persist/model/mybatis/Payment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="68" column="35" lean-forward="false" selection-start-line="68" selection-start-column="19" selection-end-line="68" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="142" column="43" lean-forward="false" selection-start-line="142" selection-start-column="43" selection-end-line="142" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/impl/PaymentServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="709">
@@ -796,21 +812,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/elextec/persist/model/mybatis/Payment.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="68" column="35" lean-forward="false" selection-start-line="68" selection-start-column="19" selection-end-line="68" selection-end-column="35" />
-          <folding />
+        <state relative-caret-position="253">
+          <caret line="52" column="29" lean-forward="false" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+          <folding>
+            <element signature="e#55#1194#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/controller/PaymentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-694">
-          <caret line="72" column="36" lean-forward="false" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
+        <state relative-caret-position="755">
+          <caret line="179" column="2" lean-forward="false" selection-start-line="179" selection-start-column="2" selection-end-line="179" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#list#0;class#PaymentController#0" expanded="false" />
+            <element signature="method#addone#0;class#PaymentController#0" expanded="false" />
+            <element signature="method#modify#0;class#PaymentController#0" expanded="false" />
           </folding>
         </state>
       </provider>

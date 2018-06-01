@@ -1,6 +1,10 @@
 package com.elextec.lease.manager.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.alipay.api.AlipayClient;
+import com.alipay.api.request.AlipayTradeAppPayRequest;
+import com.alipay.api.request.AlipayTradePagePayRequest;
+import com.alipay.api.request.AlipayTradeWapPayRequest;
 import com.elextec.framework.common.constants.RunningResult;
 import com.elextec.framework.common.response.MessageResponse;
 import com.elextec.framework.utils.WzStringUtil;
@@ -14,6 +18,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +27,7 @@ import java.util.List;
  * 支付模块
  */
 @RestController
-@RequestMapping(value = "/payment/configuration")
+@RequestMapping(value = "/pay/configuration")
 public class PaymentController {
 
     /**日志*/
@@ -30,8 +36,11 @@ public class PaymentController {
     @Autowired
     private PaymentService paymentService;
 
+    @Autowired
+    private AlipayClient alipayClient;//支付宝请求sdk客户端
+
     @Value("${localsetting.download-payment-icon}")
-    private String downloadPaymentIcon;
+    private String downloadPaymentIcon;//支付logo路径
 
     /**
      * 查询支付方式logo
@@ -137,5 +146,45 @@ public class PaymentController {
         paymentService.updatePayment(payment);
         return new MessageResponse(RunningResult.SUCCESS);
     }
+
+    /**
+     * 支付请求
+     * @param httpResponse
+     * @return
+     */
+//    @GetMapping("/app}")
+//    public String app(HttpServletResponse httpResponse) {
+//        JSONObject data = new JSONObject();
+//        data.put("out_trade_no", "201701010000001234"); //商户订单号
+//        data.put("product_code", "QUICK_MSECURITY_PAY"); //产品码, APP支付 QUICK_MSECURITY_PAY, PC支付 FAST_INSTANT_TRADE_PAY, 移动H5支付 QUICK_WAP_PAY
+//        data.put("total_amount", "0.01"); //订单金额
+//        data.put("subject", "测试订单"); //订单标题
+//
+//        //APP支付
+//        AlipayTradeAppPayRequest alipayTradeAppPayRequest = new AlipayTradeAppPayRequest();
+//
+//        //PC支付
+//        //AlipayTradePagePayRequest alipayTradePagePayRequest = new AlipayTradePagePayRequest();
+//
+//        //移动H5支付
+//        //AlipayTradeWapPayRequest alipayTradeWapPayRequest = new AlipayTradeWapPayRequest();
+//
+//        alipayTradeAppPayRequest.setNotifyUrl("http://demo/pay/alipay/notify/1"); //异步通知地址
+//
+//        alipayTradeAppPayRequest.setBizContent(data.toJSONString()); //业务参数
+//
+//        return alipayClient.sdkExecute(alipayTradeAppPayRequest).getBody();
+//
+//    }
+
+//    @PostMapping("/notify")
+//    public String notify(HttpServletRequest request) {
+//        if (!notify(request.getParameterMap())) {
+//            //这里处理验签失败
+//        }
+//        request.getParameter("trade_no");//获取请求参数中的商户订单号
+//        return "success";
+//    }
+
 
 }

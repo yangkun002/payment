@@ -33,6 +33,7 @@
         <commons-codec.version>1.11</commons-codec.version>
         <jodd-core.version>4.1.4</jodd-core.version>
         <projectlombok.version>1.16.20</projectlombok.version>
+        <alipay.version>1.0.3</alipay.version>
     </properties>
 
     <dependencies>
@@ -143,6 +144,12 @@
             <version>${projectlombok.version}</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>net.guerlab</groupId>
+            <artifactId>sdk-alipay-starter</artifactId>
+            <version>${alipay.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
