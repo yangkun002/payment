@@ -53,13 +53,22 @@ spring:
   session:
     # springboot的session存储方式
     store-type: none
-#sdk:
-#  alipay:
-#    dev: false/true 默认false，为true表示使用沙箱环境
-#    sign-type: RSA2 签名算法
-#    app-id: 应用id
-#    private-key: 应用私钥
-#    alipay-public-key: 支付宝公钥
+sdk:
+  alipay:
+    # 是否使用沙箱环境，默认false
+    dev: false
+    # 支付宝分配给开发者的应用ID
+    app-id:
+    # 仅支持JSON
+    format: json
+    # 请求使用的编码格式，如utf-8,gbk,gb2312等
+    charset: utf-8
+    # 应用私钥
+    private-key:
+     # 支付宝公钥
+    alipay-public-key:
+    # 商户生成签名字符串所使用的签名算法类型，目前支持RSA2和RSA，推荐使用RSA2
+    sign-type: RSA2
 
 mybatis:
   type-aliases-package: com.elextec.persist.dao.mybatis

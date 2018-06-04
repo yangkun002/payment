@@ -1,10 +1,11 @@
 package com.elextec.lease.manager.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.alipay.api.AlipayApiException;
 import com.alipay.api.AlipayClient;
+import com.alipay.api.DefaultAlipayClient;
 import com.alipay.api.request.AlipayTradeAppPayRequest;
-import com.alipay.api.request.AlipayTradePagePayRequest;
-import com.alipay.api.request.AlipayTradeWapPayRequest;
+import com.alipay.api.response.AlipayTradeAppPayResponse;
 import com.elextec.framework.common.constants.RunningResult;
 import com.elextec.framework.common.response.MessageResponse;
 import com.elextec.framework.utils.WzStringUtil;
@@ -18,8 +19,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,11 +35,26 @@ public class PaymentController {
     @Autowired
     private PaymentService paymentService;
 
-    @Autowired
-    private AlipayClient alipayClient;//支付宝请求sdk客户端
-
     @Value("${localsetting.download-payment-icon}")
     private String downloadPaymentIcon;//支付logo路径
+
+    @Value("${sdk.alipay.app-id}")
+    private String appId;
+
+    @Value("${sdk.alipay.private-key}")
+    private String privateKey;
+
+    @Value("${sdk.alipay.format}")
+    private String format;
+
+    @Value("${sdk.alipay.charset}")
+    private String charset;
+
+    @Value("${sdk.alipay.alipay-public-key}")
+    private String alipayPublicKey;
+
+    @Value("${sdk.alipay.sign-type}")
+    private String signType;
 
     /**
      * 查询支付方式logo
@@ -148,43 +162,65 @@ public class PaymentController {
     }
 
     /**
-     * 支付请求
-     * @param httpResponse
+     * 外部商户APP唤起快捷SDK创建订单并支付
+     * <pre>
+     *     {
+     *
+     *     }
+     * </pre>
+     * @param appParam
+     * @return
+     * <pre>
+     *     {
+     *         code:返回code,
+     *         message:返回消息，
+     *         respData:[
+     *              {
+     *                   alipay_trade_app_pay_response:{
+     *                      code: 网关返回码,
+     *                      msg: 网关返回码描述,
+     *                      out_trade_no: 商户网站唯一订单号,
+     *                      trade_no: 该交易在支付宝系统中的交易流水号,
+     *                      total_amount: 该笔订单的资金总额，单位为RMB-Yuan。取值范围为[0.01],
+     *                      seller_id:收款支付宝账号对应的支付宝唯一用户号,以2088开头的纯16位数字
+     *                   },
+     *                    sign:签名
+     *              }
+     *         ]
+     *     }
+     * </pre>
+     */
+    @PostMapping(value = "/appPayment")
+    public MessageResponse appPayment(@RequestBody String appParam){
+        //获得初始化的AlipayClient
+        AlipayClient alipayClient = new DefaultAlipayClient("https://openapi.alipay.com/gateway.do",appId,privateKey,format,charset,alipayPublicKey,signType);
+        //创建API对应的request
+        AlipayTradeAppPayRequest request = new AlipayTradeAppPayRequest();
+        //填充业务参数
+        request.setBizContent("");
+        AlipayTradeAppPayResponse response = null;
+        try {
+            response = alipayClient.pageExecute(request);
+        } catch (AlipayApiException e) {
+            e.printStackTrace();
+        }
+        if(response.isSuccess()){
+            logger.info("app支付接口调用成功");
+            return new MessageResponse(RunningResult.SUCCESS);
+        } else {
+            logger.error("app支付接口调用失败");
+            return new MessageResponse(RunningResult.BAD_REQUEST);
+        }
+    }
+
+    /**
+     *
+     * @param SesameParam
      * @return
      */
-//    @GetMapping("/app}")
-//    public String app(HttpServletResponse httpResponse) {
-//        JSONObject data = new JSONObject();
-//        data.put("out_trade_no", "201701010000001234"); //商户订单号
-//        data.put("product_code", "QUICK_MSECURITY_PAY"); //产品码, APP支付 QUICK_MSECURITY_PAY, PC支付 FAST_INSTANT_TRADE_PAY, 移动H5支付 QUICK_WAP_PAY
-//        data.put("total_amount", "0.01"); //订单金额
-//        data.put("subject", "测试订单"); //订单标题
-//
-//        //APP支付
-//        AlipayTradeAppPayRequest alipayTradeAppPayRequest = new AlipayTradeAppPayRequest();
-//
-//        //PC支付
-//        //AlipayTradePagePayRequest alipayTradePagePayRequest = new AlipayTradePagePayRequest();
-//
-//        //移动H5支付
-//        //AlipayTradeWapPayRequest alipayTradeWapPayRequest = new AlipayTradeWapPayRequest();
-//
-//        alipayTradeAppPayRequest.setNotifyUrl("http://demo/pay/alipay/notify/1"); //异步通知地址
-//
-//        alipayTradeAppPayRequest.setBizContent(data.toJSONString()); //业务参数
-//
-//        return alipayClient.sdkExecute(alipayTradeAppPayRequest).getBody();
-//
-//    }
-
-//    @PostMapping("/notify")
-//    public String notify(HttpServletRequest request) {
-//        if (!notify(request.getParameterMap())) {
-//            //这里处理验签失败
-//        }
-//        request.getParameter("trade_no");//获取请求参数中的商户订单号
-//        return "success";
-//    }
-
+    @PostMapping(value = "/selectSesameCredit")
+    public MessageResponse selectSesameCredit(@RequestBody String SesameParam){
+        return new MessageResponse(RunningResult.SUCCESS);
+    }
 
 }
