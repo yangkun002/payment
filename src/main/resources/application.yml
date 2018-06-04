@@ -19,18 +19,20 @@ spring:
 logging:
   config: classpath:logback.xml
 
+# 过滤器
 localsetting:
   platform-type: all
-  login-overtime-sec: 3600
-  login-overtime-sec-mobile: 3600
-  default-password:  123456
+  # 无需过滤名单
   nofilters:
+  # 白名单验证
   white-flag: false
   white-url:
+  # 黑名单验证
   black-flag: true
   black-url:
   cors:
     flag: true
+  # 短信
   sms:
     url: http://112.74.76.186:8030/service/httpService/httpInterface.do
     username: JSM41961
@@ -40,6 +42,7 @@ localsetting:
   track-stay-time: 900000
   move-speed-threshold: 16
 
+#支付宝
 sdk:
   alipay:
     # 是否使用沙箱环境，默认false
