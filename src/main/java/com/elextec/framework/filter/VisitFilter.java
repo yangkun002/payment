@@ -29,7 +29,7 @@ import java.util.concurrent.TimeUnit;
 @Order(Integer.MAX_VALUE)
 @WebFilter(filterName = "VisitFilter", urlPatterns = "/*")
 public class VisitFilter implements Filter {
-    
+
     /** 日志. */
     private static final Logger logger = LoggerFactory.getLogger(VisitFilter.class);
 
