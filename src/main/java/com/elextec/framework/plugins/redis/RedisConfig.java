@@ -24,6 +24,30 @@ import redis.clients.jedis.JedisPoolConfig;
 @EnableAutoConfiguration
 public class RedisConfig {
 
+    @Value("${spring.redis.host}")
+    private String host;//redis服务器地址
+
+    @Value("${spring.redis.port}")
+    private int port;//redis服务器连接端口
+
+    @Value("${spring.redis.timeout}")
+    private int timeout;//连接超时时间（毫秒）
+
+    @Value("${spring.redis.password}")
+    private String password;//Redis服务器连接密码（默认为空）
+
+    @Value("${spring.redis.pool.max-active}")
+    private int maxActive;//连接池最大连接数（使用负值表示没有限制）
+
+    @Value("${spring.redis.pool.max-wait}")
+    private int maxWait;//连接池最大阻塞等待时间（使用负值表示没有限制）
+
+    @Value("${spring.redis.pool.max-idle}")
+    private int maxIdle;//连接池中的最大空闲连接
+
+    @Value("${spring.redis.pool.min-idle}")
+    private int minIdle;//连接池中的最小空闲连接
+
     @Bean
     public RedisTemplate<String, Object> getRedisTemplate(RedisConnectionFactory redisConnectionFactory) {
         RedisTemplate<String, Object> template = new RedisTemplate<String, Object>();
@@ -44,12 +68,7 @@ public class RedisConfig {
 
     @Bean
     @ConfigurationProperties(prefix = "spring.redis")
-    public JedisConnectionFactory getJedisConnectionFactory(
-            @Value("${spring.redis.host}") String host,
-            @Value("${spring.redis.port}") int port,
-            @Value("${spring.redis.timeout}") int timeout,
-            @Value("${spring.redis.password}") String password,
-            JedisPoolConfig jedisPoolConfig) {
+    public JedisConnectionFactory getJedisConnectionFactory(JedisPoolConfig jedisPoolConfig) {
         JedisConnectionFactory jcf = new JedisConnectionFactory();
         jcf.setHostName(host);
         jcf.setPort(port);
@@ -63,11 +82,7 @@ public class RedisConfig {
 
     @Bean
     @ConfigurationProperties(prefix = "spring.redis")
-    public JedisPoolConfig getJedisPoolConfig(
-            @Value("${spring.redis.pool.max-active}") int maxActive,
-            @Value("${spring.redis.pool.max-wait}") int maxWait,
-            @Value("${spring.redis.pool.max-idle}") int maxIdle,
-            @Value("${spring.redis.pool.min-idle}") int minIdle) {
+    public JedisPoolConfig getJedisPoolConfig() {
         JedisPoolConfig jpc = new JedisPoolConfig();
         jpc.setMaxTotal(maxActive);
         jpc.setMaxWaitMillis(maxWait);

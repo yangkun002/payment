@@ -1,16 +1,17 @@
 server:
-  port: 8081
+  port: 8082
   tomcat:
     uri-encoding: utf-8
+
 spring:
-#activemq
-  activemq:
-    broker-url: tcp://106.14.172.38:61616
-    user: admin
-    password: admin
-    in-memory: true
-    # 如果此处设置为true，需要加activemq-pool的依赖包，否则会自动配置失败，报JmsMessagingTemplate注入失败
-    pool.enabled: false
+#  #消息队列
+#  activemq:
+#    broker-url: tcp://106.14.172.38:61616
+#    user: admin
+#    password: admin
+#    in-memory: true
+#    # 如果此处设置为true，需要加activemq-pool的依赖包，否则会自动配置失败，报JmsMessagingTemplate注入失败
+#    pool.enabled: false
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://106.14.172.38:3996/lease_sys?useUnicode=true&characterEncoding=utf8&useSSL=false&autoReconnect=true
@@ -33,17 +34,27 @@ spring:
       web-stat-filter:
         enabled: false
   redis:
+    # redis服务器地址
     host: 127.0.0.1
+    # redis服务器连接端口
     port: 9736
     pool:
+      # 连接池最大连接数（使用负值表示没有限制）
       max-active: 8
+      # 连接池最大阻塞等待时间（使用负值表示没有限制）
       max-wait: -1
+      # 连接池中的最大空闲连接
       max-idle: 8
+      # 连接池中的最小空闲连接
       min-idle: 0
+    # 连接超时时间（毫秒）
     timeout: 0
+    # Redis服务器连接密码（默认为空）
     password: Njjs12345678%^&
   session:
+    # springboot的session存储方式
     store-type: none
+
 mybatis:
   type-aliases-package: com.elextec.persist.dao.mybatis
   mapper-locations: classpath*:sqlmap/*.xml
@@ -60,18 +71,11 @@ mybatis:
     hibernate:
       ddl-auto: update
     show-sql: true
+
 logging:
   config: classpath:logback.xml
+
 localsetting:
-  upload-root: /root/tomcat-8990/webapps/leaseupload
-  download-prefix: http://106.14.172.38:8990/leaseupload
-  upload-captcha-root: /root/tomcat-8990/webapps/leaseupload/captcha
-  download-captcha-prefix: http://106.14.172.38:8990/leaseupload/captcha
-  upload-user-icon-root: /root/tomcat-8990/webapps/leaseupload/usericon
-  download-user-icon-prefix: http://106.14.172.38:8990/leaseupload/usericon
-  upload-user-realname-root: /root/tomcat-8990/webapps/leaseupload/userrealname
-  download-user-realname-prefix: http://106.14.172.38:8990/leaseupload/userrealname
-  upload-res-icon-root: /root/tomcat-8990/webapps/leaseupload/resicon
-  download-res-icon-prefix: http://106.14.172.38:8990/leaseupload/resicon
-  upload-other-img-root: /root/tomcat-8990/webapps/leaseupload/otherimg
-  download-other-img-prefix: http://106.14.172.38:8990/leaseupload/otherimg
+  # 支付logo
+  upload-payment-icon: /root/tomcat-8990/webapps/payment/icon/
+  download-payment-icon: http://106.14.172.38:8990/payment/icon/
