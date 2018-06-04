@@ -135,7 +135,7 @@ public class PaymentController {
         if (WzStringUtil.isBlank(modifyParam)) {
             return new MessageResponse(RunningResult.NO_PARAM);
         }
-        String paramStr = URLDecoder.decode(modifyParam,"uyf-8");
+        String paramStr = URLDecoder.decode(modifyParam,"utf-8");
         Payment payment = JSONObject.parseObject(paramStr,Payment.class);
         if (payment == null) {
             return new MessageResponse(RunningResult.PARAM_ANALYZE_ERROR);

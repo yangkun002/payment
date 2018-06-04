@@ -2,63 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="899f6e28-2a09-4f6c-bcc7-604f24789d21" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/PaymentApplication.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/BaseController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/BaseModel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/WzControllerAdvice.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/common/constants/RunningResult.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/common/constants/WzConstants.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/common/request/DataPermissionRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/common/request/LoginParam.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/common/request/ModifyPasswordParam.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/common/request/RefRoleResourceParam.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/common/request/RefUserRolesParam.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/common/request/RegisterParam.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/common/request/ResetPasswordParam.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/common/request/SmsParam.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/common/request/UpdateMobileParam.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/common/response/MessageResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/config/CorsConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/config/MyHttpMessageConverterConf.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/exceptions/BizException.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/filter/VisitFilter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/filter/WzHttpServletRequestWrapper$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/filter/WzHttpServletRequestWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/interceptors/ControllerInterceptor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/plugins/image/WzImageClient.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/plugins/paging/PageRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/plugins/paging/PageResponse.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/plugins/redis/RedisClient.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/plugins/redis/RedisConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/plugins/sms/SmsClient.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/plugins/sms/SmsConstants.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/plugins/sms/SmsResult.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/plugins/sms/SmsStatusAndMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/utils/WzCaptchaUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/utils/WzCheckCodeUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/utils/WzDateUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/utils/WzEncryptUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/utils/WzFileUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/utils/WzGPSUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/utils/WzHttpUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/utils/WzStringUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/framework/utils/WzUniqueValUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/lease/device/common/DeviceApiConstants.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/lease/device/common/DeviceRespMsg.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/lease/manager/controller/PaymentController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/lease/manager/model/PaymentParts.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/lease/manager/service/PaymentService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/lease/manager/service/impl/PaymentServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/persist/dao/mybatis/PaymentMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/persist/dao/mybatis/PaymentMapperExt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/persist/model/mybatis/Payment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/persist/model/mybatis/PaymentExample$Criteria.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/persist/model/mybatis/PaymentExample$Criterion.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/persist/model/mybatis/PaymentExample$GeneratedCriteria.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/elextec/persist/model/mybatis/PaymentExample.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/elextec/framework/plugins/redis/RedisConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/elextec/framework/plugins/redis/RedisConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application-prod.yml" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/controller/PaymentController.java" afterPath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/controller/PaymentController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="application-dev.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="application-dev.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="63" column="7" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="7" />
+            <state relative-caret-position="571">
+              <caret line="77" column="22" lean-forward="true" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -103,17 +47,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PaymentController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PaymentController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/controller/PaymentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="641">
-              <caret line="176" column="2" lean-forward="true" selection-start-line="176" selection-start-column="2" selection-end-line="176" selection-end-column="2" />
+            <state relative-caret-position="411">
+              <caret line="137" column="59" lean-forward="false" selection-start-line="137" selection-start-column="59" selection-end-line="137" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#list#0;class#PaymentController#0" expanded="false" />
                 <element signature="e#1983#1997#0" expanded="true" />
                 <element signature="method#addone#0;class#PaymentController#0" expanded="false" />
-                <element signature="method#modify#0;class#PaymentController#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -152,10 +95,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/PaymentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/impl/PaymentServiceImpl.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/controller/PaymentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/elextec/framework/plugins/redis/RedisConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application-prod.yml" />
         <option value="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/controller/PaymentController.java" />
       </list>
     </option>
   </component>
@@ -485,12 +428,12 @@
       <workItem from="1527734804111" duration="2246000" />
       <workItem from="1527748811635" duration="8054000" />
       <workItem from="1527816311629" duration="8534000" />
-      <workItem from="1528074860499" duration="5631000" />
+      <workItem from="1528074860499" duration="6233000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24465000" />
+    <option name="totallyTimeSpent" value="25067000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -728,17 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/impl/PaymentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="48" column="46" lean-forward="false" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#updatePayment#0;class#PaymentServiceImpl#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/PaymentService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
@@ -957,20 +889,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/controller/PaymentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="176" column="2" lean-forward="true" selection-start-line="176" selection-start-column="2" selection-end-line="176" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#list#0;class#PaymentController#0" expanded="false" />
-            <element signature="e#1983#1997#0" expanded="true" />
-            <element signature="method#addone#0;class#PaymentController#0" expanded="false" />
-            <element signature="method#modify#0;class#PaymentController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application-prod.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-874">
@@ -981,9 +899,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="63" column="7" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="7" />
+        <state relative-caret-position="571">
+          <caret line="77" column="22" lean-forward="true" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/impl/PaymentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="709">
+          <caret line="48" column="46" lean-forward="false" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#updatePayment#0;class#PaymentServiceImpl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/controller/PaymentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="137" column="59" lean-forward="false" selection-start-line="137" selection-start-column="59" selection-end-line="137" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#list#0;class#PaymentController#0" expanded="false" />
+            <element signature="e#1983#1997#0" expanded="true" />
+            <element signature="method#addone#0;class#PaymentController#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
