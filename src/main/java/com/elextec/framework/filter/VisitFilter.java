@@ -29,8 +29,7 @@ import java.util.concurrent.TimeUnit;
 @Order(Integer.MAX_VALUE)
 @WebFilter(filterName = "VisitFilter", urlPatterns = "/*")
 public class VisitFilter implements Filter {
-
-
+    
     /** 日志. */
     private static final Logger logger = LoggerFactory.getLogger(VisitFilter.class);
 
@@ -59,7 +58,6 @@ public class VisitFilter implements Filter {
     public void init(FilterConfig filterConfig) throws ServletException {
         logger.info("===访问过滤器初始化===");
     }
-
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response,FilterChain chain) throws IOException, ServletException {
