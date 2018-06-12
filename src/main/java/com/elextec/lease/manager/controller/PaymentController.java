@@ -214,7 +214,7 @@ public class PaymentController {
     }
 
     /**
-     *
+     * 获取用户的芝麻分
      * @param SesameParam
      * @return
      */
