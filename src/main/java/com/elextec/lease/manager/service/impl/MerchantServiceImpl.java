@@ -1,4 +1,46 @@
 package com.elextec.lease.manager.service.impl;
 
-public class MerchantServiceImpl {
+import com.elextec.lease.manager.service.MerchantService;
+import com.elextec.persist.dao.mybatis.MerchantMapperExt;
+import com.elextec.persist.model.mybatis.Merchant;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class MerchantServiceImpl implements MerchantService {
+
+    /* 日志 */
+    private final Logger logger = LoggerFactory.getLogger(MerchantServiceImpl.class);
+
+    @Autowired
+    private MerchantMapperExt merchantMapperExt;
+
+    @Override
+    public List<Merchant> list(Merchant merchant) {
+        return null;
+    }
+
+    @Override
+    public void insterMerchant(Merchant merchant) {
+
+    }
+
+    @Override
+    public void updateMerchant(Merchant merchant) {
+
+    }
+
+    @Override
+    public void deleteMerchant(Merchant merchant) {
+
+    }
+
+    @Override
+    public Merchant getByPrimaryKay(String id) {
+        return null;
+    }
 }
