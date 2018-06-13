@@ -40,7 +40,24 @@
         </javaClientGenerator>
         
         <!-- 规则信息表 -->
-        <table schema="" tableName="payment" domainObjectName="Payment"></table>
+        <!--支付配置表-->
+        <table schema="" tableName="payment_plugin" domainObjectName="PaymentPlugin">
+            <columnOverride column="payment_type" property="paymentType" javaType="com.elextec.persist.field.enums.PaymentType" jdbcType="VARCHAR"></columnOverride>
+        </table>
+
+        <!--商户表-->
+        <table schema="" tableName="merchant" domainObjectName="Merchant"></table>
+
+        <!--明细表-->
+        <table schema="" tableName="detailed" domainObjectName="Detailed">
+            <columnOverride column="type" property="type" javaType="com.elextec.persist.field.enums.PaymentType" jdbcType="VARCHAR"></columnOverride>
+        </table>
+
+        <!--业务流水表-->
+        <table schema="" tableName="business" domainObjectName="Business">
+            <columnOverride column="type" property="Type" javaType="com.elextec.persist.field.enums.PaymentType" jdbcType="VARCHAR"></columnOverride>
+        </table>
+
         <!--<table schema="" tableName="sys_user" domainObjectName="SysUser">-->
             <!--<columnOverride column="user_type" property="userType" javaType="com.elextec.persist.field.enums.OrgAndUserType" jdbcType="VARCHAR"></columnOverride>-->
         <!--</table>-->
