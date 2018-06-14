@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="899f6e28-2a09-4f6c-bcc7-604f24789d21" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/controller/BusinessController.java" afterPath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/controller/BusinessController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/controller/DetailedController.java" afterPath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/controller/DetailedController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/BusinessService.java" afterPath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/BusinessService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/DetailedService.java" afterPath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/DetailedService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/MerchantService.java" afterPath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/MerchantService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/PaymentPluginService.java" afterPath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/PaymentPluginService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/impl/BusinessServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/impl/BusinessServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/impl/DetailedServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/impl/DetailedServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/impl/MerchantServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/impl/MerchantServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/impl/PaymentPluginServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/elextec/lease/manager/service/impl/PaymentPluginServiceImpl.java" />
-    </list>
+    <list default="true" id="899f6e28-2a09-4f6c-bcc7-604f24789d21" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -132,7 +121,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-4" />
     <option name="width" value="1370" />
     <option name="height" value="735" />
@@ -475,15 +464,15 @@
       <workItem from="1528360058798" duration="609000" />
       <workItem from="1528440400900" duration="43000" />
       <workItem from="1528440926647" duration="608000" />
-      <workItem from="1528852289890" duration="21162000" />
+      <workItem from="1528852289890" duration="21530000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64253000" />
+    <option name="totallyTimeSpent" value="64621000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
