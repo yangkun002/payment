@@ -48,7 +48,7 @@ public class MerchantController extends BaseController {
             logger.error("参数解析错误");
             return new MessageResponse(RunningResult.PARAM_ANALYZE_ERROR);
         }
-        return new MessageResponse(RunningResult.SUCCESS,merchantService.list(map));
+        return new MessageResponse(RunningResult.SUCCESS,map.get("id"));
     }
 
     @ApiOperation(value = "添加商户", notes = "增加商户信息",httpMethod = "POST",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
