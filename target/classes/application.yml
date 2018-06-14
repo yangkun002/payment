@@ -9,26 +9,30 @@ spring:
       exclude: src/main/resources/static/**,src/main/resources/templates/**
   http:
     multipart:
-      #默认支持文件上传
+      # 默认支持文件上传
       enabled: true
-      #单个文件最大限制
+      # 单个文件最大限制
       max-file-size: 10Mb
-      #总文件最大限制
+      # 总文件最大限制
       max-request-size: 30Mb
+
 logging:
   config: classpath:logback.xml
+
+# 过滤器
 localsetting:
   platform-type: all
-  login-overtime-sec: 3600
-  login-overtime-sec-mobile: 3600
-  default-password:  123456
+  # 无需过滤名单
   nofilters:
+  # 白名单验证
   white-flag: false
   white-url:
+  # 黑名单验证
   black-flag: true
   black-url:
   cors:
     flag: true
+  # 短信
   sms:
     url: http://112.74.76.186:8030/service/httpService/httpInterface.do
     username: JSM41961
@@ -37,3 +41,21 @@ localsetting:
     tempid1: JSM41961-0001
   track-stay-time: 900000
   move-speed-threshold: 16
+
+#支付宝
+sdk:
+  alipay:
+    # 是否使用沙箱环境，默认false
+    dev: false
+    # 支付宝分配给开发者的应用ID
+    app-id:
+    # 仅支持JSON
+    format: json
+    # 请求使用的编码格式，如utf-8,gbk,gb2312等
+    charset: utf-8
+    # 应用私钥
+    private-key:
+     # 支付宝公钥
+    alipay-public-key:
+    # 商户生成签名字符串所使用的签名算法类型，目前支持RSA2和RSA，推荐使用RSA2
+    sign-type: RSA2

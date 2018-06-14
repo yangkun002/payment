@@ -7,10 +7,15 @@ import com.elextec.framework.common.response.MessageResponse;
 import com.elextec.framework.utils.WzStringUtil;
 import com.elextec.lease.manager.service.MerchantService;
 import com.elextec.persist.model.mybatis.Merchant;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import jodd.util.net.URLDecoder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,6 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 
+@Api(value = "MerchantController", description = "商户API")
 @RestController
 @RequestMapping(value = "/MerchantController")
 public class MerchantController extends BaseController {
@@ -28,6 +34,8 @@ public class MerchantController extends BaseController {
     @Autowired
     private MerchantService merchantService;
 
+    @ApiParam(required = false)
+    @ApiOperation(value = "商户列表", notes = "展示所有商户",httpMethod = "POST",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @RequestMapping(value = "/list",method = RequestMethod.POST)
     public MessageResponse list(@RequestBody String param){
         if (WzStringUtil.isBlank(param)) {
@@ -43,6 +51,7 @@ public class MerchantController extends BaseController {
         return new MessageResponse(RunningResult.SUCCESS,merchantService.list(map));
     }
 
+    @ApiOperation(value = "添加商户", notes = "增加商户信息",httpMethod = "POST",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @RequestMapping(value = "/addone",method = RequestMethod.POST)
     public MessageResponse addone(@RequestBody String param){
         if (WzStringUtil.isBlank(param)) {
@@ -61,6 +70,7 @@ public class MerchantController extends BaseController {
         return new MessageResponse(RunningResult.SUCCESS);
     }
 
+    @ApiOperation(value = "修改商户信息", notes = "修改商户信息",httpMethod = "POST",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @RequestMapping(value = "/modify",method = RequestMethod.POST)
     public MessageResponse modify(@RequestBody String param){
         if (WzStringUtil.isBlank(param)) {
@@ -78,12 +88,13 @@ public class MerchantController extends BaseController {
         return new MessageResponse(RunningResult.SUCCESS);
     }
 
+    @ApiOperation(value = "删除商户", notes = "删除商户",httpMethod = "POST",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @RequestMapping(value = "/delete",method = RequestMethod.POST)
     public MessageResponse delete(@RequestBody String param){
-        
         return new MessageResponse(RunningResult.SUCCESS);
     }
 
+    @ApiOperation(value = "根据id查询商户", notes = "查询商户",httpMethod = "POST",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @RequestMapping(value = "/getByPK",method = RequestMethod.POST)
     public MessageResponse getByPK(@RequestBody String param){
         return new MessageResponse(RunningResult.SUCCESS);
