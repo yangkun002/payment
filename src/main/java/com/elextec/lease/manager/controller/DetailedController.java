@@ -1,6 +1,7 @@
 package com.elextec.lease.manager.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.elextec.framework.BaseController;
 import com.elextec.framework.common.constants.RunningResult;
 import com.elextec.framework.common.response.MessageResponse;
 import com.elextec.framework.utils.WzStringUtil;
@@ -22,7 +23,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping(value = "/DetailedController")
-public class DetailedController {
+public class DetailedController extends BaseController {
 
     /* 日志 */
     private final Logger logger = LoggerFactory.getLogger(BusinessController.class);

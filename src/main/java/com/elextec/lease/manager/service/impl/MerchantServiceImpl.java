@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class MerchantServiceImpl implements MerchantService {
@@ -20,7 +21,7 @@ public class MerchantServiceImpl implements MerchantService {
     private MerchantMapperExt merchantMapperExt;
 
     @Override
-    public List<Merchant> list(Merchant merchant) {
+    public List<Merchant> list(Map<String,Object> map) {
         return null;
     }
 

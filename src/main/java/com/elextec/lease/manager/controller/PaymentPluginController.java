@@ -1,4 +1,6 @@
 package com.elextec.lease.manager.controller;
 
-public class PaymentPluginController {
+import com.elextec.framework.BaseController;
+
+public class PaymentPluginController extends BaseController {
 }

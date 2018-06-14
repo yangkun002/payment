@@ -8,6 +8,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Map;
+
 @Service
 public class PaymentPluginServiceImpl implements PaymentPluginService {
 
@@ -16,6 +19,11 @@ public class PaymentPluginServiceImpl implements PaymentPluginService {
 
     @Autowired
     private PaymentPluginMapperExt paymentPluginMapperExt;
+
+    @Override
+    public List<PaymentPlugin> list(Map<String, Object> map) {
+        return null;
+    }
 
     @Override
     public void insterPaymentPlugin(PaymentPlugin paymentPlugin) {

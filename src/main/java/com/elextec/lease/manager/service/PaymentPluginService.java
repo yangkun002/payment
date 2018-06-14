@@ -2,7 +2,17 @@ package com.elextec.lease.manager.service;
 
 import com.elextec.persist.model.mybatis.PaymentPlugin;
 
+import java.util.List;
+import java.util.Map;
+
 public interface PaymentPluginService {
+
+    /**
+     * 支付配置列表
+     * @param map
+     * @return
+     */
+    public List<PaymentPlugin> list(Map<String,Object> map);
 
     /**
      * 插入支付配置信息

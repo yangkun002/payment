@@ -3,15 +3,16 @@ package com.elextec.lease.manager.service;
 import com.elextec.persist.model.mybatis.Merchant;
 
 import java.util.List;
+import java.util.Map;
 
 public interface MerchantService {
 
     /**
      * 商户列表
-     * @param merchant 商户
+     * @param map 商户
      * @return 列表
      */
-    public List<Merchant> list(Merchant merchant);
+    public List<Merchant> list(Map<String,Object> map);
 
     /**
      * 新增商户
