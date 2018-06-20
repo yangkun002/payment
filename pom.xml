@@ -36,6 +36,8 @@
         <alipay.version>1.0.3</alipay.version>
         <springfox-swagger-ui>2.6.1</springfox-swagger-ui>
         <springfox-swagger2>2.6.1</springfox-swagger2>
+        <httpclient>4.5.3</httpclient>
+        <jedis>2.9.0</jedis>
     </properties>
 
     <dependencies>
@@ -178,6 +180,18 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
             <version>${springfox-swagger-ui}</version>
+        </dependency>
+
+        <!--SSO-->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>${httpclient}</version>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>${jedis}</version>
         </dependency>
 
     </dependencies>
